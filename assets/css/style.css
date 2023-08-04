@@ -72,10 +72,15 @@ footer {
 }
 
 .item-menu-title {
+  text-decoration: none;
+  font-family: "Sacramento", cursive;
+  font-size: 30px;
+  color: #2d5d41;
 }
 
 .item-menu {
   color: #2d5d41;
+  text-decoration: none;
 }
 
 .container-menu {
@@ -84,6 +89,14 @@ footer {
   align-items: center;
   gap: 10px;
   padding: 20px;
+}
+
+.container-contact {
+  display: none;
+}
+
+.contact {
+  display: none;
 }
 
 /*-----carrusel gallery mobil-----*/
@@ -150,13 +163,13 @@ footer {
 .container-card {
   padding: 20px 30px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 15px 30px;
+  gap: 20px;
 }
 
 .card {
-  width: 250px;
+  width: 220px;
   height: 100%;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -261,6 +274,21 @@ footer {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
+  }
+
+  .container-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 150px;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
   }
 
   /*-----diseño footer-----*/
