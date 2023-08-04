@@ -39,6 +39,7 @@ gallery {
   position: relative;
   overflow-y: auto;
   font-family: "Quicksand", sans-serif;
+  padding-bottom: 55px;
 }
 
 footer {
@@ -51,12 +52,23 @@ footer {
   font-family: "Quicksand", sans-serif;
 }
 
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
 .container-brand {
-  font-size: 50px;
+  display: flex;
+  align-items: center;
+  font-size: 35px;
+}
+
+.name-brand {
 }
 
 .logo {
-  width: 50px;
+  width: 40px;
 }
 
 .item-menu-title {
@@ -67,24 +79,28 @@ footer {
 }
 
 .container-menu {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
 }
 
-/*-----carrusel gallery-----*/
+/*-----carrusel gallery mobil-----*/
 .carrusel-container {
   overflow: hidden;
-  background-color: #2d5d41;
+  background-color: #e5e7ca;
 }
 
 .carrusel {
-  animation: automatizacion 10s infinite linear;
-  transition: all 0.75s ease;
+  animation: automatizacion 12s infinite linear;
+  transition: all 0.85s ease;
   width: 300%;
-  height: 90vh;
+  height: 53vh;
 }
 
 .imagenes {
-  height: 600px;
+  height: 300px;
   width: 100%;
 }
 
@@ -126,18 +142,22 @@ footer {
 .title-menu-section {
   font-family: "Sacramento", cursive;
   font-size: 50px;
-  padding: 30px;
+  padding: 40px;
 }
+
 /*-----diseño cards-----*/
+
 .container-card {
+  padding: 20px 30px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 60vh;
-  gap: 40px;
+  flex-wrap: wrap;
+  gap: 15px 30px;
 }
+
 .card {
   width: 250px;
+  height: 100%;
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
@@ -150,7 +170,7 @@ footer {
 
 .card img {
   width: 100%;
-  height: 280px;
+  height: 230px;
   object-fit: cover;
 }
 
@@ -161,21 +181,14 @@ footer {
   align-items: center;
 }
 
-.card h2 {
-  font-size: 1.5 rem;
-  margin: 0;
-  padding: 0;
-}
-
 .card p {
   margin: 5px 0;
 }
 
 .btn-comprar {
   display: block;
-  width: 100%;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #2d5d41;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -183,7 +196,7 @@ footer {
 }
 
 .btn-comprar:hover {
-  background-color: #0056b3;
+  background-color: #8bb887;
 }
 
 .card:hover {
@@ -219,7 +232,8 @@ footer {
   flex-direction: column;
 }
 
-/*desktop*/
+/*---------desktop----------*/
+
 @media (min-width: 992px) {
   .grid-container {
     grid-template-areas:
@@ -234,6 +248,14 @@ footer {
     display: none;
   }
 
+  .container-brand {
+    font-size: 50px;
+  }
+
+  .logo {
+    width: 50px;
+  }
+
   .container-menu {
     display: flex;
     flex-direction: column;
@@ -241,8 +263,28 @@ footer {
     padding: 20px;
   }
 
-  .grid-container-card {
-    flex-direction: row;
+  /*-----diseño footer-----*/
+  .container-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+  }
+
+  .icons-footer {
+    display: flex;
+    gap: 15px;
+  }
+
+  .icon-footer {
+    color: white;
+  }
+
+  .text-footer {
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
   }
 
   footer {
@@ -252,5 +294,57 @@ footer {
 
   .icon-footer {
     font-size: 2em;
+  }
+
+  /*-----carrusel gallery desktop-----*/
+  .carrusel-container {
+    overflow: hidden;
+  }
+
+  .carrusel {
+    animation: automatizacion 12s infinite linear;
+    transition: all 0.85s ease;
+    width: 300%;
+    height: 85vh;
+  }
+
+  .imagenes {
+    height: 600px;
+    width: 100%;
+  }
+
+  .carrusel-gallery {
+    float: left;
+    width: 33.333%;
+  }
+
+  @keyframes automatizacion {
+    0% {
+      margin-left: 0;
+    }
+
+    30% {
+      margin-left: 0;
+    }
+
+    35% {
+      margin-left: -100%;
+    }
+
+    65% {
+      margin-left: -100%;
+    }
+
+    70% {
+      margin-left: -200%;
+    }
+
+    95% {
+      margin-left: -200%;
+    }
+
+    100% {
+      margin-left: 0;
+    }
   }
 }
