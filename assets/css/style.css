@@ -5,7 +5,7 @@
 
 .grid-container {
   display: grid;
-  grid-template-rows: 1fr 1fr 10fr 1fr;
+  grid-template-rows: 1fr 1fr 10fr 1.5fr;
   grid-template-areas:
     "nav"
     "menu"
@@ -64,11 +64,11 @@ footer {
   font-size: 35px;
 }
 
-.name-brand {
-}
-
 .logo {
   width: 40px;
+}
+
+.name-brand {
 }
 
 .item-menu-title {
@@ -91,11 +91,7 @@ footer {
   padding: 20px;
 }
 
-.container-contact {
-  display: none;
-}
-
-.contact {
+.container-location {
   display: none;
 }
 
@@ -109,17 +105,18 @@ footer {
   animation: automatizacion 12s infinite linear;
   transition: all 0.85s ease;
   width: 300%;
-  height: 53vh;
+  height: 47vh;
 }
 
 .imagenes {
-  height: 300px;
+  height: 100%;
   width: 100%;
 }
 
 .carrusel-gallery {
   float: left;
-  width: 33.333%;
+  width: 33.33334%;
+  height: 100%;
 }
 
 @keyframes automatizacion {
@@ -154,10 +151,18 @@ footer {
 
 .title-menu-section {
   font-family: "Sacramento", cursive;
-  font-size: 50px;
-  padding: 40px;
+  font-size: 35px;
+  padding: 10px;
 }
 
+.container-location-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 25px;
+  gap: 10px;
+}
 /*-----diseño cards-----*/
 
 .container-card {
@@ -216,13 +221,14 @@ footer {
   transform: scale(1.05);
 }
 
-/*-----diseño footer-----*/
+/*---diseño footer---*/
 .container-footer {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  font-size: 10px;
+  font-size: 15px;
+  height: 100%;
 }
 
 .icons-footer {
@@ -238,11 +244,6 @@ footer {
   font-size: 15px;
   display: flex;
   justify-content: center;
-}
-
-.test {
-  display: flex;
-  flex-direction: column;
 }
 
 /*---------desktop----------*/
@@ -276,22 +277,31 @@ footer {
     padding: 20px;
   }
 
-  .container-contact {
+  .container-location {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    padding-top: 150px;
+    padding-top: 200px;
   }
 
-  .contact {
+  .container-location-mobile {
+    display: none;
+  }
+
+  .location {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 15px;
   }
 
-  /*-----diseño footer-----*/
+  .title-menu-section {
+    font-family: "Sacramento", cursive;
+    font-size: 50px;
+    padding: 40px;
+  }
+
+  /*---diseño footer---*/
   .container-footer {
     display: flex;
     justify-content: center;
