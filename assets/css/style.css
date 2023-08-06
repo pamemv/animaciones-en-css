@@ -3,6 +3,9 @@
   padding: 0px;
 }
 
+hr {
+  width: 100%;
+}
 .grid-container {
   display: grid;
   grid-template-rows: 1fr 1fr 10fr 1.5fr;
@@ -60,15 +63,13 @@ footer {
 
 .container-brand {
   display: flex;
+  justify-content: center;
   align-items: center;
   font-size: 35px;
 }
 
 .logo {
-  width: 40px;
-}
-
-.name-brand {
+  width: 20%;
 }
 
 .item-menu-title {
@@ -78,9 +79,17 @@ footer {
   color: #2d5d41;
 }
 
+.item-menu-title:hover {
+  color: rgb(158, 84, 155);
+}
+
 .item-menu {
   color: #2d5d41;
   text-decoration: none;
+}
+
+.item-menu:hover {
+  color: rgb(158, 84, 155);
 }
 
 .container-menu {
@@ -152,7 +161,7 @@ footer {
 .title-menu-section {
   font-family: "Sacramento", cursive;
   font-size: 35px;
-  padding: 10px;
+  padding: 15px;
 }
 
 .container-location-mobile {
@@ -240,6 +249,10 @@ footer {
   color: white;
 }
 
+.icon-footer:hover {
+  color: rgb(158, 84, 155);
+}
+
 .text-footer {
   font-size: 15px;
   display: flex;
@@ -263,11 +276,14 @@ footer {
   }
 
   .container-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 50px;
   }
 
   .logo {
-    width: 50px;
+    width: 8%;
   }
 
   .container-menu {
